@@ -30,8 +30,26 @@ limitations under the License.
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var iterator = require( '@stdlib/random-iter-f' );
+iterator = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-f@umd/bundle.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-f@umd/bundle.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.iterator;
+})()
+</script>
 ```
 
 #### iterator( d1, d2\[, options] )
@@ -181,8 +199,13 @@ The returned iterator protocol-compliant object has the following properties:
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var iterator = require( '@stdlib/random-iter-f' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-f@umd/bundle.js"></script>
+<script type="text/javascript">
+(function () {
 
 var it;
 var r;
@@ -201,6 +224,11 @@ while ( true ) {
     }
     console.log( r.value );
 }
+
+})()
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -273,6 +301,13 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 
 -->
 
+[umd]: https://github.com/umdjs/umd
+[es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+
+[deno-url]: https://github.com/stdlib-js/random-iter-f/tree/deno
+[umd-url]: https://github.com/stdlib-js/random-iter-f/tree/umd
+[esm-url]: https://github.com/stdlib-js/random-iter-f/tree/esm
+
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
 [chat-url]: https://gitter.im/stdlib-js/stdlib/
 
@@ -284,11 +319,11 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 
 [f]: https://en.wikipedia.org/wiki/F_distribution
 
-[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32/tree/umd
 
 <!-- <related-links> -->
 
-[@stdlib/random/base/f]: https://github.com/stdlib-js/random-base-f
+[@stdlib/random/base/f]: https://github.com/stdlib-js/random-base-f/tree/umd
 
 <!-- </related-links> -->
 
